@@ -1,3 +1,5 @@
+require('dotenv').config(); // Load environment variables from .env file
+
 const express = require('express');
 const r = require('rethinkdb');
 const bodyParser = require('body-parser');
@@ -7,14 +9,14 @@ const app = express();
 const port = 3000;
 const XLSX = require('xlsx');
 
-
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Connect to RethinkDB
-r.connect({ host: '192.168.10.2', port: 28015, db: 'test' }, (err, connection) => {
+const rethinkdbHost = process.env.RETHINKDB_HOST || 'localhost'; // Use environment variable
+r.connect({ host: rethinkdbHost, port: 28015, db: 'test' }, (err, connection) => {
     if (err) throw err;
     conn = connection;
     console.log('Connected to RethinkDB');
