@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   app:
-    image: eaeoz/rethinkdb-query-app:1
+    image: eaeoz/rethinkdb-query-app:3
     ports:
       - "3000:3000"
     volumes:
