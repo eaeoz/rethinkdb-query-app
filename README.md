@@ -42,3 +42,9 @@ or single record:
 }
 
 ```
+
+#### To Run Application (on cli)
+
+`npm install`
+
+`node server.js`
