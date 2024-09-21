@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  app:
+    image: eaeoz/rethinkdb-query-app:1
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./queries.txt:/usr/src/app/queries.txt
+    environment:
+      - RETHINKDB_HOST=rethinkdb
+    depends_on:
+      - rethinkdb
+
+  rethinkdb:
+    image: eaeoz/rethinkdb:1
+    container_name: rethinkdb
+    environment:
+      - RETHINKDB_PACKAGE_VERSION=2.4.4~0bookworm
+      - RETHINKDB_DATA_DIR=/data
+      - RETHINKDB_BIND_ALL=true
+      # Add any additional performance-related environment variables here
+    ports:
+      - "28015:28015" # RethinkDB HTTP API
+      - "29015:29015" # RethinkDB driver port
+      - "30015:8080" # RethinkDB web UI
+    volumes:
+      - ./data:/data # Bind mount to the local 'data' directory
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5" # Limit to 0.5 CPU
+          memory: 256M # Limit to 512 MB of memory
+
