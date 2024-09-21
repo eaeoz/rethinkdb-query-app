@@ -1,0 +1,6 @@
+orderBy id
+r.db('test').table('test_table').orderBy(r.asc('id'))
+value columns only
+r.db('test').table('test_table').pluck('value')
+value query greater then 100
+r.db("test").table("test_table").filter(r.row("value").gt(100))

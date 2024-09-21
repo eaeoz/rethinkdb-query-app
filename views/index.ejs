@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RethinkDB Query Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .radio-group label {
+            margin: 0 10px;
+        }
+
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>RethinkDB Query Selector</h1>
+    <form action="/run-query" method="POST">
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="queryType" value="list" checked onchange="toggleQueryInput()"> Predefined
+                Query
+            </label>
+            <label>
+                <input type="radio" name="queryType" value="manual" onchange="toggleQueryInput()"> Manual Query
+            </label>
+        </div>
+
+        <select name="query" id="queryList">
+            <% queries.forEach(query=> { %>
+                <option value="<%= query %>">
+                    <%= query %>
+                </option>
+                <% }); %>
+        </select>
+
+        <textarea name="manualQuery" id="manualQuery" placeholder="Enter your RethinkDB query here"
+            style="display: none;"></textarea>
+
+        <button type="submit">Run Query</button>
+    </form>
+
+    <script>
+        function toggleQueryInput() {
+            const queryType = document.querySelector('input[name="queryType"]:checked').value;
+            const queryList = document.getElementById('queryList');
+            const manualQuery = document.getElementById('manualQuery');
+
+            if (queryType === 'list') {
+                queryList.style.display = 'block';
+                manualQuery.style.display = 'none';
+            } else {
+                queryList.style.display = 'none';
+                manualQuery.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
