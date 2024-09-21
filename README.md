@@ -35,10 +35,10 @@ add new records to the table using ReQLPro json example:
 
 or single record:
 
-  {
-    "id": "1" ,
-    "name": "test1" ,
-    "value": 99
-  }
+{
+  "id": "1" ,
+  "name": "test1" ,
+  "value": 99
+}
 
 ```
