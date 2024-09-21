@@ -1,0 +1,38 @@
+2024-09-21T10:24:15.102206925 0.025084s notice: Recursively removing directory /data/rethinkdb_data/tmp
+2024-09-21T10:24:15.134574570 0.057447s notice: Initializing directory /data/rethinkdb_data
+2024-09-21T10:24:15.135082825 0.057956s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/data/rethinkdb_data' did not already exist or is empty.)
+2024-09-21T10:24:15.135729014 0.058602s notice: Running rethinkdb 2.4.4~0bookworm (x86_64-linux-gnu) (GCC 12.2.0)...
+2024-09-21T10:24:15.139874133 0.062747s notice: Running on Linux 6.8.0-39-generic x86_64
+2024-09-21T10:24:15.139896562 0.062769s notice: Loading data from directory /data/rethinkdb_data
+2024-09-21T10:24:15.176768690 0.099641s info: Automatically using cache size of 1277 MB
+2024-09-21T10:24:15.180958477 0.103832s notice: Listening for intracluster connections on port 29015
+2024-09-21T10:24:15.187715261 0.110588s notice: Listening for client driver connections on port 28015
+2024-09-21T10:24:15.187813136 0.110686s notice: Listening for administrative HTTP connections on port 8080
+2024-09-21T10:24:15.187822846 0.110696s notice: Listening on cluster addresses: 127.0.0.1, 172.25.0.2, ::1
+2024-09-21T10:24:15.187831315 0.110704s notice: Listening on driver addresses: 127.0.0.1, 172.25.0.2, ::1
+2024-09-21T10:24:15.187839445 0.110712s notice: Listening on http addresses: 127.0.0.1, 172.25.0.2, ::1
+2024-09-21T10:24:15.187845295 0.110718s notice: Server ready, "bc77bf359403_w8n" 82f66d19-97b5-4371-9dec-8ce8212ded97
+2024-09-21T10:39:19.612953113 904.535826s notice: Server got SIGTERM from pid 0, uid 0; shutting down...
+2024-09-21T10:39:19.613023677 904.535896s notice: Shutting down client connections...
+2024-09-21T10:39:19.613147943 904.536021s notice: All client connections closed.
+2024-09-21T10:39:19.613150213 904.536023s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2024-09-21T10:39:19.616758375 904.539631s notice: Storage engine shut down.
+2024-09-21T11:37:03.865471010 0.013372s notice: Running rethinkdb 2.4.4~0bookworm (x86_64-linux-gnu) (GCC 12.2.0)...
+2024-09-21T11:37:03.867310660 0.015212s notice: Running on Linux 6.8.0-39-generic x86_64
+2024-09-21T11:37:03.867340351 0.015241s notice: Loading data from directory /data/rethinkdb_data
+2024-09-21T11:37:03.878719072 0.026620s info: Automatically using cache size of 1155 MB
+2024-09-21T11:37:03.879822512 0.027724s notice: Listening for intracluster connections on port 29015
+2024-09-21T11:37:03.880753308 0.028654s notice: Listening for client driver connections on port 28015
+2024-09-21T11:37:03.880808769 0.028710s notice: Listening for administrative HTTP connections on port 8080
+2024-09-21T11:37:03.880815010 0.028716s notice: Listening on cluster addresses: 127.0.0.1, 172.25.0.2, ::1
+2024-09-21T11:37:03.880821190 0.028722s notice: Listening on driver addresses: 127.0.0.1, 172.25.0.2, ::1
+2024-09-21T11:37:03.880827070 0.028728s notice: Listening on http addresses: 127.0.0.1, 172.25.0.2, ::1
+2024-09-21T11:37:03.880835690 0.028737s notice: Server ready, "bc77bf359403_w8n" 82f66d19-97b5-4371-9dec-8ce8212ded97
+2024-09-21T11:39:23.725623715 139.873525s info: Table 7ff30c96-8465-4de2-b6a2-57a27318b745: Starting a new Raft election for term 1.
+2024-09-21T11:39:23.725834142 139.873735s info: Table 7ff30c96-8465-4de2-b6a2-57a27318b745: Added replica on this server.
+2024-09-21T11:39:23.728401588 139.876303s info: Table 7ff30c96-8465-4de2-b6a2-57a27318b745: This server is Raft leader for term 1. Latest log index is 0.
+2024-09-21T11:40:38.413475667 214.561377s notice: Server got SIGTERM from pid 0, uid 0; shutting down...
+2024-09-21T11:40:38.413597571 214.561499s notice: Shutting down client connections...
+2024-09-21T11:40:38.414300316 214.562202s notice: All client connections closed.
+2024-09-21T11:40:38.414341878 214.562243s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2024-09-21T11:40:38.419828182 214.567729s notice: Storage engine shut down.
