@@ -6,7 +6,10 @@
 
 - Clone Repo
 
-`git clone https://github.com/eaeoz/rethinkdb-query-app.git`
+```
+git clone https://github.com/eaeoz/rethinkdb-query-app.git
+cd rethinkdb-query-app
+```
 
 - Deploy
 
