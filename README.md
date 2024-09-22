@@ -6,9 +6,9 @@
 
 #### Windows App to manage database from gui:
 
-- (ReQLPro)[https://github.com/codehangar/reqlpro/releases]
+- [ReQLPro](https://github.com/codehangar/reqlpro/releases)
 
-- (Examples)[https://rethinkdb.com/docs/cookbook/javascript/]
+- [Examples](https://rethinkdb.com/docs/cookbook/javascript/)
 
 ```
 (id record unique can't be same)
