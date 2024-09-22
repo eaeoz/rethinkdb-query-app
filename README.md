@@ -4,14 +4,13 @@
 
 - [Docker Installation](https://hub.docker.com/r/eaeoz/rethinkdb-query-app)
 
+#### Windows App to manage database from gui:
+
+- (ReQLPro)[https://github.com/codehangar/reqlpro/releases]
+
+- (Examples)[https://rethinkdb.com/docs/cookbook/javascript/]
+
 ```
-
-download windows app to manage database from gui:
-https://github.com/codehangar/reqlpro/releases
-
-check for more queries:
-https://rethinkdb.com/docs/cookbook/javascript/
-
 (id record unique can't be same)
 add new records to the table using ReQLPro json example:
 
