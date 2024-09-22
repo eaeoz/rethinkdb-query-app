@@ -8,7 +8,7 @@
 
 `git clone https://github.com/eaeoz/rethinkdb-query-app.git`
 
-- Deploy Compose
+- Deploy
 
 `docker-compose up -d`
 
