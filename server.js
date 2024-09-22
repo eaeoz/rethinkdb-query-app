@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Connect to RethinkDB
-const rethinkdbHost = process.env.RETHINKDB_HOST || 'localhost'; // Use environment variable for host
+const rethinkdbHost = process.env.RETHINKDB_HOST || 'rethinkdb'; // Use environment variable for host
 const rethinkdbPort = process.env.RETHINKDB_PORT || 28015; // Use environment variable for port
 const rethinkdbDb = process.env.RETHINKDB_DB || 'test'; // Use environment variable for database
 
