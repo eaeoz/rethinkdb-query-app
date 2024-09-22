@@ -1,8 +1,10 @@
 ### RethinkDB Query List from Text or Manual Query Excel Exporter
 
+##### RethinkDB Query App let you update list from text (to select whenever you want to view query result) or let you enter manual query from gui, then you can import as xslx (excel format)
+
 - [Docker Installation](https://hub.docker.com/r/eaeoz/rethinkdb-query-app)
 
-##### RethinkDB Query App let you update list from text (to select whenever you want to view query result) or let you enter manual query from gui, then you can import as xslx (excel format)
+##### You can add more queries to queries.txt as same format. (don't forget to restart container if new list added)
 
 - Clone Repo
 
@@ -14,8 +16,6 @@ cd rethinkdb-query-app
 - Deploy
 
 `docker-compose up -d`
-
-##### You can add more queries to queries.txt as same format. (don't forget to restart container if new list added)
 
 #### Database Commands and Queries
 
