@@ -15,12 +15,39 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Connect to RethinkDB
-const rethinkdbHost = process.env.RETHINKDB_HOST || 'localhost'; // Use environment variable
-r.connect({ host: rethinkdbHost, port: 28015, db: 'test' }, (err, connection) => {
+const rethinkdbHost = process.env.RETHINKDB_HOST || 'localhost'; // Use environment variable for host
+const rethinkdbPort = process.env.RETHINKDB_PORT || 28015; // Use environment variable for port
+const rethinkdbDb = process.env.RETHINKDB_DB || 'test'; // Use environment variable for database
+
+r.connect({ host: rethinkdbHost, port: rethinkdbPort, db: rethinkdbDb }, (err, connection) => {
     if (err) throw err;
+
+    // Check if the database exists
+    r.dbList().run(connection, (err, dbs) => {
+        if (err) throw err;
+
+        // If the database does not exist, create it
+        if (!dbs.includes(rethinkdbDb)) {
+            r.dbCreate(rethinkdbDb).run(conn, (err, result) => {
+                if (err) throw err;
+                console.log(`Database '${rethinkdbDb}' created successfully.`);
+            });
+        } else {
+            console.log(`Database '${rethinkdbDb}' already exists.`);
+        }
+        // Close the connection
+        // conn.close();
+    });
     conn = connection;
     console.log('Connected to RethinkDB');
 });
+
+// r.connect({ host: rethinkdbHost, port: rethinkdbPort, db: rethinkdbDb }, (err, connection) => {
+//     if (err) throw err;
+//     conn = connection;
+//     console.log('Connected to RethinkDB');
+// });
+
 
 
 // Read queries from the queries.txt file
