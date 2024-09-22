@@ -2,7 +2,7 @@
 
 #### To Add Manual Records (Windows Gui)
 
-- [Docker Installation](https://hub.docker.com/r/eaeoz/rethinkdb-query-app){:target="\_blank"}
+- [Docker Installation](https://hub.docker.com/r/eaeoz/rethinkdb-query-app)
 
 ```
 
