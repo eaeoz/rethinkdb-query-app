@@ -1,14 +1,24 @@
 ### RethinkDB Query List from Text or Manual Query Excel Exporter
 
-#### To Add Manual Records (Windows Gui)
-
 - [Docker Installation](https://hub.docker.com/r/eaeoz/rethinkdb-query-app)
+
+##### RethinkDB Query App let you update list from text (to select whenever you want to view query result) or let you enter manual query from gui, then you can import as xslx (excel format)
+
+- Clone Repo
+
+`git clone https://github.com/eaeoz/rethinkdb-query-app.git`
+
+- Deploy Compose
+
+`docker-compose up -d`
+
+##### You can add more queries to queries.txt as same format. (don't forget to restart container if new list added)
 
 #### Database Commands and Queries
 
 - [Examples](https://rethinkdb.com/docs/cookbook/javascript/)
 
-#### Windows App to manage database from gui:
+#### To Add Manual Records (Windows Gui)
 
 - [ReQLPro](https://github.com/codehangar/reqlpro/releases)
 
